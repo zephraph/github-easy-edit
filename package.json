@@ -1,0 +1,19 @@
+{
+  "name": "github-easy-edit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build src/index.ts",
+    "package": "zip -j gee.zip dist/index.js manifest.json"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.78",
+    "parcel-bundler": "^1.11.0",
+    "typescript": "^3.2.4"
+  },
+  "dependencies": {
+    "@octokit/rest": "^16.13.4",
+    "medium-editor": "^5.23.3"
+  }
+}

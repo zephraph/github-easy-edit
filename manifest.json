@@ -1,0 +1,15 @@
+{
+  "name": "GitHub Easy Edit",
+  "version": "1.0",
+  "description": "Easily update markdown documentation on GitHub",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "exclude_matches": [
+        "https://github.com/settings/*",
+        "https://github.com/login"
+      ]
+    }
+  ],
+  "manifest_version": "2"
+}
