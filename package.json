@@ -3,17 +3,28 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "browserslist": [
+    "last 1 chrome version"
+  ],
   "scripts": {
+    "postinstall": "patch-package",
+    "prebuild": "rm -rf dist",
     "build": "parcel build src/index.ts",
-    "package": "zip -j gee.zip dist/index.js manifest.json"
+    "postbuild": "yarn package",
+    "package": "cat files.txt | zip dist/gee.zip -@"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.78",
     "parcel-bundler": "^1.11.0",
+    "patch-package": "^6.0.2",
     "typescript": "^3.2.4"
   },
   "dependencies": {
     "@octokit/rest": "^16.13.4",
-    "medium-editor": "^5.23.3"
+    "marked": "^0.6.0",
+    "medium-editor": "^5.23.3",
+    "medium-editor-markdown": "^3.0.0",
+    "turndown": "^5.0.3",
+    "turndown-plugin-gfm": "^1.0.2"
   }
 }

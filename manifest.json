@@ -8,8 +8,13 @@
       "exclude_matches": [
         "https://github.com/settings/*",
         "https://github.com/login"
+      ],
+      "js": ["./dist/index.js"],
+      "css": [
+        "./node_modules/medium-editor/dist/css/medium-editor.min.css",
+        "./node_modules/medium-editor/dist/css/themes/default.min.css"
       ]
     }
   ],
-  "manifest_version": "2"
+  "manifest_version": 2
 }
